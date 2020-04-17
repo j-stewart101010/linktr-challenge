@@ -5,14 +5,22 @@ import styles from './subLinkList.module.css';
 
 export const SubLinkListList = ({
   children,
-}) => (
-  <ul className={ styles.list }>
-    { children }
-</ul>
-);
+  component = 'ul',
+}) => {
+  const Component = (component);
+  return (
+    <Component className={ styles.list }>
+      { children }
+    </Component>
+  );
+};
 
 SubLinkListList.propTypes = {
   children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+  ]),
+  component: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.string,
   ]),

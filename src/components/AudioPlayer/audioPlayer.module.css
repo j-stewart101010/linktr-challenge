@@ -1,0 +1,27 @@
+@value spacing: '../../styles/config/spacing.module.css';
+
+@value spacing_xs from spacing;
+
+/* @TODO: In a real app, it would be worth looking at using a grid system instead of */
+/* defining these styles over and over */
+.audioPlayer {
+
+}
+
+.thumb {
+  margin-right: spacing_xs;
+}
+
+.title,
+.panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progressBar {
+  position: relative;
+  margin-top: spacing_xs;
+  height: 2px;
+  width: 25%; /* @TODO: For demonstration purposes */
+}

@@ -24,7 +24,7 @@ export const LinkListItem = ({
           </Link>
         </div>
       )}
-      { item.list && item.list.length && (
+      { item.list && (
         <>
           <div className={ styles.button } onClick={ handleActivePanel } style={ theme(item.theme) }>
             <Typography variant="body1" component="span">{ item.text }</Typography>
