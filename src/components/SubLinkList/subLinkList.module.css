@@ -2,7 +2,7 @@
 @value colors: '../../styles/config/colors.module.css';
 
 @value spacing_sm from spacing;
-@value grey200, grey300 from colors;
+@value grey200, grey300, grey400 from colors;
 
 .pane {
   
@@ -14,6 +14,7 @@
   list-style-type: none;
 }
 
+.line,
 .link,
 .item {
   display: flex;
@@ -28,12 +29,17 @@
 }
 
 /* @TODO: Border should go to the edge of the panel */
-.item + .item {
-  margin-top: spacing_sm;
+.item {
   padding-top: spacing_sm;
-  border-top: 1px solid grey200;
+  padding-bottom: spacing_sm;
+  border-bottom: 1px solid grey200;
 }
 
-.title + .subtitle {
+.itemIcon {
+  fill: grey400;
+  margin-right: spacing_sm;
+}
+
+.subtitle {
   margin-top: spacing_sm;
 }

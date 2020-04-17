@@ -16,7 +16,10 @@ const Typography = ({
 };
 
 Typography.propTypes = {
-  component: PropTypes.string,
+  component: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+  ]),
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.string,

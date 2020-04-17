@@ -8,7 +8,10 @@ import styles from './subLinkList.module.css';
 
 export const SubLinkListItem = ({
   item,
+  component = 'li',
+  onClick = () => {},
 }) => {
+  const Component = (component);
   const {
     title,
     subtitle,
@@ -31,25 +34,31 @@ export const SubLinkListItem = ({
         )}
         {/* @TODO: This would be a generic Icon component */}
         { link && (
-          <svg width="20" focusable="false" viewBox="0 0 24 24" aria-hidden="true" tabindex="-1" title="ChevronRight"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
+          <svg width="20px" focusable="false" viewBox="0 0 24 24" aria-hidden="true" tabIndex="-1" title="ChevronRight"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
         )}
       </span>
-    </>    
+    </>
   );
   return (
-    <li className={ styles.item }>
+    <Component onClick={ onClick } className={ styles.item }>
       {link ? (
         <Link className={ styles.link } link={ link }><Pane /></Link> 
       ) : (
         <Pane />
       )}
-    </li>
+    </Component>
   );
 };
 
 // @TODO: In a real app, it may be better to use something like TypeScript for typing but for demonstration purposes PropTypes are fine.
+// We would also shape objects so we know what's expected to be contained
 SubLinkListItem.propTypes = {
   item: PropTypes.object,
+  component: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+  ]),
+  onClick: PropTypes.func,
 };
 
 export default SubLinkListItem;

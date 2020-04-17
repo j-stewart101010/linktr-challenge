@@ -15,17 +15,19 @@ export const api = [
       "textColor": "#282828",
     },
     "text": "Shows",
-    "list": [{
-      "id": "sublink1",
-      "title": "April 01 2019",
-      "link": "https://forummelbourne.com.au/",
-      "subtitle": "The Forum, Melbourne",
-    },{
-      "id": "sublink2",
-      "title": "April 01 2019",
-      "subtitle": "The Forum, Melbourne",
-      "note": "Sold out",
-    }]
+    "list": {
+      "items": [{
+        "id": "sublink1",
+        "title": "April 01 2019",
+        "link": "https://forummelbourne.com.au/",
+        "subtitle": "The Forum, Melbourne",
+      },{
+        "id": "sublink2",
+        "title": "April 01 2019",
+        "subtitle": "The Forum, Melbourne",
+        "note": "Sold out",
+      }],
+    },
   },{
     "id": "link3",
     "theme": {
@@ -33,13 +35,36 @@ export const api = [
       "textColor": "#282828",
     },
     "text": "Music",
-    "list": [{
-      "id": "sublink3",
+    "type": "audioPlayer",
+    "list": {
       "type": "audioPlayer",
-      "link": "https://www.spotify.com/au/",
-      "text": "48H",
-    }]
-  }
+      "items": [{
+        "id": "sublink3",
+        "title": "April 01 2019",
+        "iconLink": "https://open.spotify.com/artist/4nDoRrQiYLoBzwC5BhVJzF",
+        "player": {
+          "thumb": "https://via.placeholder.com/75",
+          "title": "Song 1 name - Artist 2 name",
+          "theme": {
+            "backgroundColor": "#39e09b",
+            "textColor": "#282828",
+          },
+        },
+      },{
+        "id": "sublink4",
+        "title": "May 08 2019",
+        "link": "https://open.spotify.com/artist/4nDoRrQiYLoBzwC5BhVJzF",
+        "player": {
+          "thumb": "https://via.placeholder.com/75",
+          "title": "Song 2 name - Artist 2 name",
+          "theme": {
+            "backgroundColor": "#39e09b",
+            "textColor": "#282828",
+          },
+        },
+      }],
+    },
+  },
 ];
 
 export default api;
