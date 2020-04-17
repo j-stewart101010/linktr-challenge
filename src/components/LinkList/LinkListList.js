@@ -9,7 +9,7 @@ export const LinkListList = ({
   children,
 }) => (
   // Could use a more generic List component here to output uls
-  <ul className={ styles.linkListList }>
+  <ul className={ styles.list }>
     { children }
   </ul>
 );

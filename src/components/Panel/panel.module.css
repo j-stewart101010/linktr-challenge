@@ -1,0 +1,19 @@
+@value spacing: '../../styles/config/spacing.module.css';
+@value colors: '../../styles/config/colors.module.css';
+
+@value grey100 from colors;
+@value spacing_xxs, spacing_md from spacing;
+
+.panel {
+  display: block;
+}
+
+/* @TODO: Panel component should sit flush with their buttons */
+.primary {
+  background-color: grey100;
+  border-radius: spacing_xxs;
+}
+
+.md {
+  padding: spacing_md;
+}

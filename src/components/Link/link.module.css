@@ -3,7 +3,6 @@
 @value spacing_sm, spacing_lg from spacing;
 
 .link {
-  display: block;
   color: inherit;
   text-decoration: inherit;
 }
