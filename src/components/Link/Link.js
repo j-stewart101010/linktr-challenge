@@ -5,6 +5,7 @@ import styles from './link.module.css';
 
 export const Link = ({
   id,
+  className,
   children,
   link,
   onClick = () => {},
@@ -13,7 +14,7 @@ export const Link = ({
     <a
       data-testid={ id }
       href={ link }
-      className={ styles.link }
+      className={ `${styles.link} ${className}` }
       onClick={ onClick }
     >
       { children }
@@ -23,6 +24,7 @@ export const Link = ({
 
 Link.propTypes = {
   id: PropTypes.string,
+  className: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.string,

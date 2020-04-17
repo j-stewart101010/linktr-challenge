@@ -1,0 +1,39 @@
+@value spacing: '../../styles/config/spacing.module.css';
+@value colors: '../../styles/config/colors.module.css';
+
+@value spacing_sm from spacing;
+@value grey200, grey300 from colors;
+
+.pane {
+  
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.link,
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.link:hover {
+  color: grey300;
+  fill: grey300;
+}
+
+/* @TODO: Border should go to the edge of the panel */
+.item + .item {
+  margin-top: spacing_sm;
+  padding-top: spacing_sm;
+  border-top: 1px solid grey200;
+}
+
+.title + .subtitle {
+  margin-top: spacing_sm;
+}

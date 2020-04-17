@@ -11,9 +11,11 @@ export const LinkList = ({
 }) => (
   <div className={ styles.linkList }>
     <LinkListList>
-      { list.map(item => (
-        <LinkListItem key={ item.id } item={ item } />
-      ))}
+      <>
+        { list.map(item => (
+          <LinkListItem key={ item.id } item={ item } />
+        ))}
+      </>
     </LinkListList>
   </div>
 );
