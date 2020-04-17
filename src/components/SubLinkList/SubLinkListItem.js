@@ -29,6 +29,7 @@ export const SubLinkListItem = ({
         { note && (
           <Typography variant="body2" component="span">{ note }</Typography>
         )}
+        {/* @TODO: This would be a generic Icon component */}
         { link && (
           <svg width="20" focusable="false" viewBox="0 0 24 24" aria-hidden="true" tabindex="-1" title="ChevronRight"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
         )}
