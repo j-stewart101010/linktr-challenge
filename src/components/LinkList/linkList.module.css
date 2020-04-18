@@ -1,0 +1,29 @@
+@value spacing: '../../styles/config/spacing.module.css';
+
+@value spacing_xxs, spacing_sm, spacing_lg from spacing;
+
+.linkList {
+  /* @TODO: Here for demonstration purposes */
+  min-width: 300px;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.item + .item {
+  margin-top: spacing_sm;
+}
+
+.button {
+  padding: spacing_sm;
+  border-radius: spacing_xxs;
+  text-align: center;
+}
+
+.button:hover {
+  filter: invert(100%);
+  cursor: pointer;
+}

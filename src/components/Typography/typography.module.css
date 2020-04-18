@@ -1,0 +1,43 @@
+@value typography: '../../styles/config/typography.module.css';
+
+@value type_h1, type_h2, type_h3, type_h4, type_h5, type_h6, type_subtitle1, type_subtitle2, type_body1, type_body2 from typography;
+
+.h1 {
+  font-size: calc(type_h1);
+}
+
+.h2 {
+  font-size: calc(type_h2);
+}
+
+.h3 {
+  font-size: calc(type_h3);
+}
+
+.h4 {
+  font-size: calc(type_h4);
+}
+
+.h5 {
+  font-size: calc(type_h5);
+}
+
+.h6 {
+  font-size: calc(type_h6);
+}
+
+.subtitle1 {
+  font-size: calc(type_subtitle1);
+}
+
+.subtitle2 {
+  font-size: calc(type_subtitle2);
+}
+
+.body1 {
+  font-size: calc(type_body1);
+}
+
+.body2 {
+  font-size: calc(type_body2);
+}

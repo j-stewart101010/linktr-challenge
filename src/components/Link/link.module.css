@@ -1,0 +1,8 @@
+@value spacing: '../../styles/config/spacing.module.css';
+
+@value spacing_sm, spacing_lg from spacing;
+
+.link {
+  color: inherit;
+  text-decoration: inherit;
+}
